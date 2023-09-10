@@ -24,6 +24,8 @@ namespace Gungar.CAI.Prototipos._2
         {
             model = new Ejercicio02Model();
             this.marcaCombo.Items.AddRange(model.Marcas);
+            this.nombreUsuarioText.Text = model.NombreUsuario;
+            this.nombreRealText.Text = model.NombreReal;
         }
 
         private void aceptarBtn_Click(object sender, EventArgs e)
@@ -33,6 +35,8 @@ namespace Gungar.CAI.Prototipos._2
             model.AnoIngresado = this.anoText.Text;
             model.MarcaIngresada = (string)this.marcaCombo.SelectedItem;
 
+            ReiniciarForm();
+
             string mensaje = model.Validar();
             this.resultadoText.Text = mensaje;
         }
@@ -40,6 +44,16 @@ namespace Gungar.CAI.Prototipos._2
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             ReiniciarForm();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

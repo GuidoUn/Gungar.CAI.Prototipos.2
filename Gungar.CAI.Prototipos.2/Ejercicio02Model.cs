@@ -8,12 +8,12 @@ namespace Gungar.CAI.Prototipos._2
 {
     internal class Ejercicio02Model
     {
+        public string NombreUsuario { get; } = "Gungar";
+        public string NombreReal { get; } = "Guido Ungar";
+
         public string[] Marcas { get; set; } = new string[] { "Ford", "Fiat", "Chevrolet", "Audi" };
-
         public string? ModeloIngresado { get; set; }
-
         public string? AnoIngresado { get; set; }
-
         public string? PrecioIngresado { get; set; }
         public string? MarcaIngresada { get; set; }
 
