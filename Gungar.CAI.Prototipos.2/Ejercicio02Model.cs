@@ -8,6 +8,10 @@ namespace Gungar.CAI.Prototipos._2
 {
     internal class Ejercicio02Model
     {
+        const string comboNoSeleccionado = "Por favor seleccione una opción para";
+        const string textoIncompleto = "Por favor ingrese un valor para";
+
+
         public string NombreUsuario { get; } = "Gungar";
         public string NombreReal { get; } = "Guido Ungar";
 
@@ -20,7 +24,23 @@ namespace Gungar.CAI.Prototipos._2
 
         public string Validar()
         {
-            // Validar y responder un texto de error si hay error, si no un Ok
+            if (String.IsNullOrEmpty(MarcaIngresada))
+            {
+                return comboNoSeleccionado + " la marca";
+            }
+            if (String.IsNullOrEmpty(ModeloIngresado))
+            {
+                return textoIncompleto + " el modelo";
+            }
+            if (String.IsNullOrEmpty(AnoIngresado))
+            {
+                return textoIncompleto + " el año";
+            }
+            if (String.IsNullOrEmpty(PrecioIngresado))
+            {
+                return textoIncompleto + " el precio";
+            }
+
 
             return "Ok";
         }

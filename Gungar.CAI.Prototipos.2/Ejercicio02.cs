@@ -35,8 +35,6 @@ namespace Gungar.CAI.Prototipos._2
             model.AnoIngresado = this.anoText.Text;
             model.MarcaIngresada = (string)this.marcaCombo.SelectedItem;
 
-            ReiniciarForm();
-
             string mensaje = model.Validar();
             this.resultadoText.Text = mensaje;
         }
